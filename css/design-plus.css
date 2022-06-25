@@ -579,13 +579,16 @@ table {
 .page_menu{
   margin:100px 50px 50px;
 }
+
 .page_menu_heading{
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-
+.menu_name{
+  margin-bottom: 12px;
+}
 .page_menu_wrap{
   display: flex;
 }
