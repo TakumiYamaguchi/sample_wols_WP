@@ -1,0 +1,30 @@
+.menu{
+    margin: 50px;
+}
+.menu_heading{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu_wrap{
+    display: block;
+}
+
+/* @media screen and (max-width:767px){
+    .menu_wrap{
+        display: block;
+    }
+} */
+
+.menu_content{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.menu_content:nth-of-type(2n){
+    margin-right: 0;
+}
+
+.menu_list{
+    color: red;
+    font-weight: bold;
+}
