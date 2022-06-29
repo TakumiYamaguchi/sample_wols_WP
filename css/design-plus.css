@@ -518,91 +518,41 @@ a:hover img.fade { opacity:0.7; filter:alpha(opacity=70); -ms-filter:"alpha( opa
 .pl10{padding-left:10px !important}
 
 /* ----------------------------------------------------------------------
- Menu CSS design　スクロール
+追加CSS
 ---------------------------------------------------------------------- */
-.menu{
-  margin: 50px;
+.menu_img__inner{
+  padding: 3vw;
 }
-.menu_heading{
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.menu_inner{
-  display: flex;
-}
-/* .menu_wrap{
-  display: flex;
-} */
-
-/* @media screen and (max-width:767px){
-  .menu_wrap{
-      display: block;
-  }
-} */
-
-.menu_content{
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-.menu_content:last-of-type{
-  margin-right: 0;
-}
-
-/* ----------------------------------------------------------------------
- Menu CSS design　別ページ
----------------------------------------------------------------------- */
-
-table {
-  border: 1px solid #eee;
-  border-collapse: collapse;
-  border-spacing: 0;
-  table-layout: fixed;
+.drink_menu{
   width: 100%;
-}
-
-.page_menu_list{
-  border: 1px solid #eee;
-  padding: 4px 6px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.page_menu_title, .page_menu_price{
-  border: 1px solid #eee;
-  padding: 4px 6px;
-  text-align: left;
-  vertical-align: top;
-}
-
-
-.page_menu{
-  margin:100px 50px 50px;
-}
-
-.page_menu_heading{
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.menu_name{
-  margin-bottom: 12px;
-}
-.page_menu_wrap{
-  display: flex;
+  box-sizing: border-box;
+  display: block;
 }
 
 @media screen and (max-width:767px){
-  .page_menu_wrap{
-      display: block;
+  .drink_menu{
+    padding: 2vw;
   }
 }
 
-.page_menu_content{
-  margin-right: 20px;
-  margin-bottom: 20px;
+.title{
+  color: #fff;
 }
-.page_menu_content:last-of-type{
-  margin-right: 0;
+.title:hover{
+  color: #5B0070;
+  transition: 0.5s !important;
+
+}
+
+/* #menu-item-115 a{
+  color: #5b0070 !important;
+} */
+
+li a{
+  color: #fff !important; 
+}
+
+li a:hover{
+  color: #5B0070 !important; 
+  transition : 0.5s;
 }

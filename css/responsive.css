@@ -132,7 +132,7 @@ body.admin-bar #drawer_menu { padding-top:32px; }
 
 /* キャッチフレーズ */
 @media screen and (max-width:750px) {
-  .cb_design_content .desc { line-height:2; margin-top:17px; }
+  .cb_design_content .desc { line-height:1.7; margin-top:17px; }
   .cb_design_content .link_button { margin-top:23px;}
 }
 
@@ -687,7 +687,7 @@ body.open_drawer_menu #drawer_menu { opacity:1; pointer-events:auto; -webkit-tra
 #header_logo { left:25px; transform: translateY(-50%) scale(1); }
 #header_logo a { }
 #header_logo .logo_image.pc { display:none; }
-#header_logo .logo_image.mobile { display:block; }
+#header_logo .logo_image.mobile { display:block; width:60px; height:20px;}
 @media screen and (max-width:750px) {
 	#header_logo { left:20px; }
   #index_header_logo .logo_image.mobile { display:block; }
@@ -707,7 +707,7 @@ body.open_drawer_menu #drawer_menu { opacity:1; pointer-events:auto; -webkit-tra
   display:inline-block; font-size:11px; width:60px; height:60px; line-height:60px; text-decoration:none; text-align:center;
 }
 #drawer_menu_button span {
-  width:22px; height:2px; background:#000; display:block; position:absolute; left:28px;
+  width:22px; height:2px; background:#fff; display:block; position:absolute; left:28px;
   -webkit-transition-property:background-color; -webkit-transition-duration:0.2s; -webkit-transition-timing-function:ease;
   transition-property:background-color; transition-duration:0.2s; transition-timing-function:ease;
 	-webkit-transition: all 0.3s ease; transition: all 0.3s ease;
