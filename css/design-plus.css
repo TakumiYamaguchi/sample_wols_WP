@@ -1533,6 +1533,10 @@ li a:hover {
 
 /* ///GALLRY CSS 調整/// */
 
+#cb_content_6{
+  padding: 0;
+}
+
 .post_content {
   height: 100%;
 }
@@ -1588,25 +1592,30 @@ li a:hover {
     align-items: normal;
     height: 100%;
   }
+  .post_col-2{
+margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .post_row {
     margin-top: 0px !important;
+    display: block;
   }
-  #cb_content_6{
-    padding: 0;
-  }
+
   .post_col-1{
     height: auto;
     align-items: flex-start;
-    margin-right: 10px;
+    width: 100%;
+    padding: 70px 0;
   }
   .title_inner{
     margin-top: 2vw;
   }
   .post_col-2{
-    margin-right: 10px !important;
+    padding:10px;
+    margin-top: 0;
+    /* margin-right: 10px !important; */
   }
 }
 
