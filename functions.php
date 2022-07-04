@@ -1060,7 +1060,7 @@ add_action( 'add_meta_boxes', 'tcd_remove_meta_boxes', 999 );
 // GALLERYへのスライド設定（URLから"/gt3_gallery/"を取り除き”#cb_content_コンテンツ番号”を挿入） ------------------------------------------------------------------------
 
 function remcat_function($link) {
-  return str_replace("gt3_gallery", "/", "#cb_content_5",$link);
+  return str_replace("gt3_gallery", "/", "#cb_content_6",$link);
   }
   add_filter('user_trailingslashit', 'remcat_function');
   function remcat_flush_rules() {

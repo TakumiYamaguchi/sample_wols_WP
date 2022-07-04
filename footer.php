@@ -1,6 +1,6 @@
 <?php $options = get_design_plus_option(); ?>
 
- <?php
+<?php
       if(is_page()){ 
         $page_hide_footer = get_post_meta($post->ID, 'page_hide_footer', true) ?  get_post_meta($post->ID, 'page_hide_footer', true) : 'no';
       } else {
@@ -10,13 +10,13 @@
       if($page_hide_footer != 'yes'){
  ?>
 
- <footer id="footer">
-  <div id="return_top2">
-   <a href="#body"><span>TOP</span></a>
-  </div>
-  <div id="copyright">
-   <?php
-        // SNSƒ{ƒ^ƒ“ ------------------------------------
+<footer id="footer">
+    <div id="return_top2">
+        <a href="#body"><span>TOP</span></a>
+    </div>
+    <div id="copyright">
+        <?php
+        // SNSï¿½{ï¿½^ï¿½ï¿½ ------------------------------------
         if($options['show_sns_footer'] == 'display') {
           $facebook = $options['sns_button_facebook_url'];
           $twitter = $options['sns_button_twitter_url'];
@@ -26,32 +26,40 @@
           $contact = $options['sns_button_contact_url'];
           $show_rss = $options['sns_button_show_rss'];
    ?>
-   <ul id="footer_sns" class="sns_button_list clearfix color_<?php echo esc_attr($options['sns_button_color_type']); ?>">
-    <?php if($insta) { ?><li class="insta"><a href="<?php echo esc_url($insta); ?>" rel="nofollow noopener" target="_blank" title="Instagram"><span>Instagram</span></a></li><?php }; ?>
-    <?php if($twitter) { ?><li class="twitter"><a href="<?php echo esc_url($twitter); ?>" rel="nofollow noopener" target="_blank" title="Twitter"><span>Twitter</span></a></li><?php }; ?>
-    <?php if($facebook) { ?><li class="facebook"><a href="<?php echo esc_url($facebook); ?>" rel="nofollow noopener" target="_blank" title="Facebook"><span>Facebook</span></a></li><?php }; ?>
-    <?php if($pinterest) { ?><li class="pinterest"><a href="<?php echo esc_url($pinterest); ?>" rel="nofollow noopener" target="_blank" title="Pinterest"><span>Pinterest</span></a></li><?php }; ?>
-    <?php if($youtube) { ?><li class="youtube"><a href="<?php echo esc_url($youtube); ?>" rel="nofollow noopener" target="_blank" title="Youtube"><span>Youtube</span></a></li><?php }; ?>
-    <?php if($contact) { ?><li class="contact"><a href="<?php echo esc_url($contact); ?>" rel="nofollow noopener" target="_blank" title="Contact"><span>Contact</span></a></li><?php }; ?>
-    <?php if($show_rss) { ?><li class="rss"><a href="<?php esc_url(bloginfo('rss2_url')); ?>" rel="nofollow noopener" target="_blank" title="RSS"><span>RSS</span></a></li><?php }; ?>
-   </ul>
-   <?php }; ?>
-   <p><?php echo wp_kses_post($options['copyright']); ?></p>
-  </div>
- </footer>
+        <ul id="footer_sns"
+            class="sns_button_list clearfix color_<?php echo esc_attr($options['sns_button_color_type']); ?>">
+            <?php if($insta) { ?><li class="insta"><a href="<?php echo esc_url($insta); ?>" rel="nofollow noopener"
+                    target="_blank" title="Instagram"><span>Instagram</span></a></li><?php }; ?>
+            <?php if($twitter) { ?><li class="twitter"><a href="<?php echo esc_url($twitter); ?>"
+                    rel="nofollow noopener" target="_blank" title="Twitter"><span>Twitter</span></a></li><?php }; ?>
+            <?php if($facebook) { ?><li class="facebook"><a href="<?php echo esc_url($facebook); ?>"
+                    rel="nofollow noopener" target="_blank" title="Facebook"><span>Facebook</span></a></li><?php }; ?>
+            <?php if($pinterest) { ?><li class="pinterest"><a href="<?php echo esc_url($pinterest); ?>"
+                    rel="nofollow noopener" target="_blank" title="Pinterest"><span>Pinterest</span></a></li><?php }; ?>
+            <?php if($youtube) { ?><li class="youtube"><a href="<?php echo esc_url($youtube); ?>"
+                    rel="nofollow noopener" target="_blank" title="Youtube"><span>Youtube</span></a></li><?php }; ?>
+            <?php if($contact) { ?><li class="contact"><a href="<?php echo esc_url($contact); ?>"
+                    rel="nofollow noopener" target="_blank" title="Contact"><span>Contact</span></a></li><?php }; ?>
+            <?php if($show_rss) { ?><li class="rss"><a href="<?php esc_url(bloginfo('rss2_url')); ?>"
+                    rel="nofollow noopener" target="_blank" title="RSS"><span>RSS</span></a></li><?php }; ?>
+        </ul>
+        <?php }; ?>
+        <p><?php echo wp_kses_post($options['copyright']); ?></p>
+    </div>
+</footer>
 
- <?php
+<?php
       }; // hide footer
  ?>
 
 </div><!-- #container -->
 
 <div id="return_top">
- <a href="#body"><span>TOP</span></a>
+    <a href="#body"><span>TOP</span></a>
 </div>
 
 <?php
-     // ‚¨’m‚ç‚¹ƒA[ƒJƒCƒu -----------------------------------------
+     // ï¿½ï¿½ï¿½mï¿½ç‚¹ï¿½Aï¿½[ï¿½Jï¿½Cï¿½u -----------------------------------------
      if(is_post_type_archive('news')) {
        $bg_image = wp_get_attachment_image_src( $options['archive_news_bg_image'], 'full' );
        if($options['archive_news_overlay_opacity'] != 0) {
@@ -61,14 +69,15 @@
        };
        if($bg_image){
 ?>
-<div id="news_archive_bg_image" style="background:url(<?php echo esc_attr($bg_image[0]); ?>) no-repeat center center; background-size:cover;"></div>
+<div id="news_archive_bg_image"
+    style="background:url(<?php echo esc_attr($bg_image[0]); ?>) no-repeat center center; background-size:cover;"></div>
 <?php
        };
      };
 ?>
 
 <?php
-     // ƒ[ƒNƒXÚ×ƒy[ƒW—pƒ‚[ƒ_ƒ‹ -------------------------------
+     // ï¿½ï¿½ï¿½[ï¿½Nï¿½Xï¿½Ú×ƒyï¿½[ï¿½Wï¿½pï¿½ï¿½ï¿½[ï¿½_ï¿½ï¿½ -------------------------------
      if(is_singular('work')){
        global $post;
        $gallery_layout = get_post_meta($post->ID, 'gallery_layout', true) ?  get_post_meta($post->ID, 'gallery_layout', true) : 'type1';
@@ -80,10 +89,10 @@
          if ( $work_content && is_array( $work_content ) ) :
 ?>
 <div id="work_image_modal_box">
- <div class="close_button"></div>
- <h3 class="title" style="color:<?php echo esc_attr($accent_color); ?>;"><?php the_title(); ?></h3>
- <div class="image_list">
-  <?php
+    <div class="close_button"></div>
+    <h3 class="title" style="color:<?php echo esc_attr($accent_color); ?>;"><?php the_title(); ?></h3>
+    <div class="image_list">
+        <?php
            foreach( $work_content as $key => $content ) :
              if ( $content['cb_content_select'] == 'layout1' ) {
                for ( $i = 1; $i <= 6; $i++ ) :
@@ -91,11 +100,13 @@
                  $caption = wp_get_attachment_caption($content['image'.$i]);
                  if($image){
   ?>
-  <div class="item">
-   <div class="image" style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;"></div>
-   <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
-  </div>
-  <?php
+        <div class="item">
+            <div class="image"
+                style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;">
+            </div>
+            <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
+        </div>
+        <?php
                  };
                endfor;
              } elseif ( $content['cb_content_select'] == 'layout2' ) {
@@ -104,11 +115,13 @@
                  $caption = wp_get_attachment_caption($content['image'.$i]);
                  if($image){
   ?>
-  <div class="item">
-   <div class="image" style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;"></div>
-   <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
-  </div>
-  <?php
+        <div class="item">
+            <div class="image"
+                style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;">
+            </div>
+            <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
+        </div>
+        <?php
                  };
                endfor;
              } elseif ( $content['cb_content_select'] == 'layout3' ) {
@@ -117,17 +130,19 @@
                  $caption = wp_get_attachment_caption($content['image'.$i]);
                  if($image){
   ?>
-  <div class="item">
-   <div class="image" style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;"></div>
-   <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
-  </div>
-  <?php
+        <div class="item">
+            <div class="image"
+                style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;">
+            </div>
+            <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
+        </div>
+        <?php
                  };
                endfor;
              };
            endforeach;
   ?>
- </div><!-- END .image_list -->
+    </div><!-- END .image_list -->
 </div><!-- END #work_image_modal_box -->
 <?php
          endif;
@@ -138,24 +153,26 @@
          if (!empty($data_list)) :
 ?>
 <div id="work_image_modal_box">
- <div class="close_button"></div>
- <h3 class="title" style="color:<?php echo esc_attr($accent_color); ?>;"><?php the_title(); ?></h3>
- <div class="image_list">
-  <?php
+    <div class="close_button"></div>
+    <h3 class="title" style="color:<?php echo esc_attr($accent_color); ?>;"><?php the_title(); ?></h3>
+    <div class="image_list">
+        <?php
            foreach ( $data_list as $key => $value ) :
              $image = isset( $value['image'] ) ? wp_get_attachment_image_src($value['image'], 'full') : '';
              $caption = wp_get_attachment_caption($value['image']);
              if($image){
   ?>
-  <div class="item">
-   <div class="image" style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;"></div>
-   <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
-  </div>
-  <?php
+        <div class="item">
+            <div class="image"
+                style="background:url(<?php echo esc_attr($image[0]); ?>) no-repeat center; background-size:contain;">
+            </div>
+            <?php if($caption){ echo '<p class="caption">' . esc_html($caption) . '</p>'; }; ?>
+        </div>
+        <?php
              };
            endforeach;
   ?>
- </div><!-- END .image_list -->
+    </div><!-- END .image_list -->
 </div><!-- END #work_image_modal_box -->
 <?php
          endif;
@@ -166,33 +183,35 @@
 ?>
 
 <?php
-     // ƒhƒƒ[ƒƒjƒ…[ --------------------------------------------
+     // ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ --------------------------------------------
      if (has_nav_menu('global-menu')) {
 ?>
 <div id="drawer_menu">
 
- <div class="close_button"></div>
+    <div class="close_button"></div>
 
- <div id="drawer_menu_content">
-  <div id="drawer_menu_content_inner">
+    <div id="drawer_menu_content">
+        <div id="drawer_menu_content_inner">
 
-  <?php // ƒƒjƒ…[ -------------------  ?>
-  <nav class="menu">
-   <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'theme_location' => 'global-menu' , 'container' => '' ) ); ?>
-  </nav>
-  <?php
-       // ŒŸõƒtƒH[ƒ€ --------------------------------------------------------------------
+            <?php // ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ -------------------  ?>
+            <nav class="menu">
+                <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'theme_location' => 'global-menu' , 'container' => '' ) ); ?>
+                <li class="sp_li">Sound</li>
+            </nav>
+            <?php
+       // ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½Hï¿½[ï¿½ï¿½ --------------------------------------------------------------------
        if( $options['drawer_menu_show_search'] == 'display') {
   ?>
-  <div id="drawer_menu_search">
-   <form role="search" method="get" action="<?php echo esc_url(home_url()); ?>">
-    <div class="input_area"><input type="text" value="" name="s" autocomplete="off"></div>
-    <div class="button_area"><label for="drawer_menu_search_button"></label><input id="drawer_menu_search_button" type="submit" value=""></div>
-   </form>
-  </div>
-  <?php }; ?>
-  <?php
-       // SNSƒ{ƒ^ƒ“ ------------------------------------
+            <div id="drawer_menu_search">
+                <form role="search" method="get" action="<?php echo esc_url(home_url()); ?>">
+                    <div class="input_area"><input type="text" value="" name="s" autocomplete="off"></div>
+                    <div class="button_area"><label for="drawer_menu_search_button"></label><input
+                            id="drawer_menu_search_button" type="submit" value=""></div>
+                </form>
+            </div>
+            <?php }; ?>
+            <?php
+       // SNSï¿½{ï¿½^ï¿½ï¿½ ------------------------------------
        if($options['drawer_menu_show_sns'] == 'display') {
          $facebook = $options['sns_button_facebook_url'];
          $twitter = $options['sns_button_twitter_url'];
@@ -202,29 +221,41 @@
          $contact = $options['sns_button_contact_url'];
          $show_rss = $options['sns_button_show_rss'];
   ?>
-  <ul id="drawer_menu_sns" class="sns_button_list clearfix color_<?php echo esc_attr($options['sns_button_color_type']); ?>">
-   <?php if($insta) { ?><li class="insta"><a href="<?php echo esc_url($insta); ?>" rel="nofollow noopener" target="_blank" title="Instagram"><span>Instagram</span></a></li><?php }; ?>
-   <?php if($twitter) { ?><li class="twitter"><a href="<?php echo esc_url($twitter); ?>" rel="nofollow noopener" target="_blank" title="Twitter"><span>Twitter</span></a></li><?php }; ?>
-   <?php if($facebook) { ?><li class="facebook"><a href="<?php echo esc_url($facebook); ?>" rel="nofollow noopener" target="_blank" title="Facebook"><span>Facebook</span></a></li><?php }; ?>
-   <?php if($pinterest) { ?><li class="pinterest"><a href="<?php echo esc_url($pinterest); ?>" rel="nofollow noopener" target="_blank" title="Pinterest"><span>Pinterest</span></a></li><?php }; ?>
-   <?php if($youtube) { ?><li class="youtube"><a href="<?php echo esc_url($youtube); ?>" rel="nofollow noopener" target="_blank" title="Youtube"><span>Youtube</span></a></li><?php }; ?>
-   <?php if($contact) { ?><li class="contact"><a href="<?php echo esc_url($contact); ?>" rel="nofollow noopener" target="_blank" title="Contact"><span>Contact</span></a></li><?php }; ?>
-   <?php if($show_rss) { ?><li class="rss"><a href="<?php esc_url(bloginfo('rss2_url')); ?>" rel="nofollow noopener" target="_blank" title="RSS"><span>RSS</span></a></li><?php }; ?>
-  </ul>
-  <?php }; ?>
-  <?php
-       // Œ¾Œêƒ{ƒ^ƒ“ ------------------------------------
+            <ul id="drawer_menu_sns"
+                class="sns_button_list clearfix color_<?php echo esc_attr($options['sns_button_color_type']); ?>">
+                <?php if($insta) { ?><li class="insta"><a href="<?php echo esc_url($insta); ?>" rel="nofollow noopener"
+                        target="_blank" title="Instagram"><span>Instagram</span></a></li><?php }; ?>
+                <?php if($twitter) { ?><li class="twitter"><a href="<?php echo esc_url($twitter); ?>"
+                        rel="nofollow noopener" target="_blank" title="Twitter"><span>Twitter</span></a></li><?php }; ?>
+                <?php if($facebook) { ?><li class="facebook"><a href="<?php echo esc_url($facebook); ?>"
+                        rel="nofollow noopener" target="_blank" title="Facebook"><span>Facebook</span></a></li>
+                <?php }; ?>
+                <?php if($pinterest) { ?><li class="pinterest"><a href="<?php echo esc_url($pinterest); ?>"
+                        rel="nofollow noopener" target="_blank" title="Pinterest"><span>Pinterest</span></a></li>
+                <?php }; ?>
+                <?php if($youtube) { ?><li class="youtube"><a href="<?php echo esc_url($youtube); ?>"
+                        rel="nofollow noopener" target="_blank" title="Youtube"><span>Youtube</span></a></li><?php }; ?>
+                <?php if($contact) { ?><li class="contact"><a href="<?php echo esc_url($contact); ?>"
+                        rel="nofollow noopener" target="_blank" title="Contact"><span>Contact</span></a></li><?php }; ?>
+                <?php if($show_rss) { ?><li class="rss"><a href="<?php esc_url(bloginfo('rss2_url')); ?>"
+                        rel="nofollow noopener" target="_blank" title="RSS"><span>RSS</span></a></li><?php }; ?>
+            </ul>
+            <?php }; ?>
+            <?php
+       // ï¿½ï¿½ï¿½ï¿½{ï¿½^ï¿½ï¿½ ------------------------------------
        if($options['drawer_menu_show_lang'] == 'display' && $options['lang_button']) {
   ?>
-  <ul class="lang_button">
-   <?php foreach ( $options['lang_button'] as $key => $value ) : ?>
-   <li<?php if($value['active_button']){ echo ' class="active"'; }; ?>><a href="<?php if($value['url']) { echo esc_url($value['url']); }; ?>" target="_blank"><?php if($value['name']) { echo esc_html($value['name']); }; ?></a></li>
-   <?php endforeach; ?>
-  </ul>
-  <?php }; ?>
+            <ul class="lang_button">
+                <?php foreach ( $options['lang_button'] as $key => $value ) : ?>
+                <li<?php if($value['active_button']){ echo ' class="active"'; }; ?>><a
+                        href="<?php if($value['url']) { echo esc_url($value['url']); }; ?>"
+                        target="_blank"><?php if($value['name']) { echo esc_html($value['name']); }; ?></a></li>
+                    <?php endforeach; ?>
+            </ul>
+            <?php }; ?>
 
-  </div><!-- END #drawer_menu_content_inner -->
- </div><!-- END #drawer_menu_content -->
+        </div><!-- END #drawer_menu_content_inner -->
+    </div><!-- END #drawer_menu_content -->
 
 </div>
 <?php }; ?>
@@ -238,14 +269,15 @@
      } elseif( is_mobile() && ($options['footer_bar_display'] != 'type3') && ($options['footer_bar_type'] == 'type2')) {
 ?>
 <div id="dp-footer-bar" class="type2">
- <?php
+    <?php
       for($i = 1; $i <= 2; $i++) {
         if($options['show_footer_button'.$i]) {
  ?>
- <a class="footer_button num<?php echo $i; ?>" href="<?php echo esc_html($options['footer_button_url'.$i]); ?>" <?php if($options['footer_button_target'.$i]){ echo 'target="_blank"'; }; ?>>
-  <span><?php echo esc_html($options['footer_button_label'.$i]); ?></span>
- </a>
- <?php }; }; ?>
+    <a class="footer_button num<?php echo $i; ?>" href="<?php echo esc_html($options['footer_button_url'.$i]); ?>"
+        <?php if($options['footer_button_target'.$i]){ echo 'target="_blank"'; }; ?>>
+        <span><?php echo esc_html($options['footer_button_label'.$i]); ?></span>
+    </a>
+    <?php }; }; ?>
 </div>
 <?php
      }
@@ -273,7 +305,18 @@
        if ( $options['sns_share_design_type'] == 'type5') :
          if ( $options['show_sns_share_twitter'] ) :
 ?>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>
+! function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');
+</script>
 <?php
          endif;
          if ( $options['show_sns_share_fblike'] || $options['show_sns_share_fbshare'] ) :
@@ -282,23 +325,35 @@
 <div id="fb-root"></div>
 <script>
 (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
 <?php
          endif;
          if ( $options['show_sns_share_hatena'] ) :
 ?>
-<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async">
+</script>
 <?php
          endif;
          if ( $options['show_sns_share_pocket'] ) :
 ?>
-<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+<script type="text/javascript">
+! function(d, i) {
+    if (!d.getElementById(i)) {
+        var j = d.createElement("script");
+        j.id = i;
+        j.src = "https://widgets.getpocket.com/v1/j/btn.js?v=1";
+        var w = d.getElementById(i);
+        d.body.appendChild(j);
+    }
+}(document, "pocket-btn-js");
+</script>
 <?php
          endif;
          if ( $options['show_sns_share_pinterest'] ) :
@@ -312,4 +367,5 @@
 
 <?php wp_footer(); ?>
 </body>
+
 </html>

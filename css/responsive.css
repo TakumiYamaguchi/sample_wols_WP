@@ -911,7 +911,7 @@ body.open_drawer_menu #drawer_menu { opacity:1; pointer-events:auto; -webkit-tra
 }
 @media screen and (max-width:750px) {
   #return_top a { height:51px; width:51px; line-height:51px; }
-  #return_top a:before { font-size:10px; left:38px; top:18px; }
+  #return_top a:before { font-size:10px; left:38px; top:18px; font-weight: bold; }
 }
 
 

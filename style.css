@@ -1525,7 +1525,7 @@ html.hide_scroll_y #footer { display:none; }
 #return_top { display:none; }
 #return_top a { color:#fff !important; display:block; height:60px; width:60px; line-height:60px; text-decoration:none; z-index:100; position:relative; }
 #return_top a:hover { }
-#return_top span { text-indent:100%; white-space:nowrap; overflow:hidden; display:block; }
+#return_top span { text-indent:100%; white-space:nowrap; overflow:hidden; display:block; background-color: #5b0070;}
 #return_top a:before {
   color:#fff; font-family:'design_plus'; content:'\e94b'; font-size:12px; display:block; width:12px; height:12px;
   position:absolute; left:48px; top:22px; margin:auto; transform: rotate(90deg);
@@ -2449,4 +2449,8 @@ body.show-horizontal .hscroll-contents {
 	transition-property: background-position;
 	transition-duration: 1s;
 	transition-timing-function: cubic-bezier(0, 0.33, 0.07, 1.03);
+}
+
+.styled_h2{
+  font-size: 12px !important;
 }
