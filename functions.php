@@ -1057,5 +1057,22 @@ function tcd_remove_meta_boxes() {
 }
 add_action( 'add_meta_boxes', 'tcd_remove_meta_boxes', 999 );
 
+// GALLERYへのスライド設定（URLから"/gt3_gallery/"を取り除き”#cb_content_コンテンツ番号”を挿入） ------------------------------------------------------------------------
+
+function remcat_function($link) {
+  return str_replace("gt3_gallery", "/", "#cb_content_5",$link);
+  }
+  add_filter('user_trailingslashit', 'remcat_function');
+  function remcat_flush_rules() {
+  global $wp_rewrite;
+  $wp_rewrite->flush_rules();
+  }
+  add_action('init', 'remcat_flush_rules');
+  function remcat_rewrite($wp_rewrite) {
+  $new_rules = array('(.+)/page/(.+)/?' => 'index.php?category_name='.$wp_rewrite->preg_index(1).'&paged='.$wp_rewrite->preg_index(2));
+  $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+  }
+  add_filter('generate_rewrite_rules', 'remcat_rewrite');
+  
 
 ?>

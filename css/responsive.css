@@ -687,7 +687,7 @@ body.open_drawer_menu #drawer_menu { opacity:1; pointer-events:auto; -webkit-tra
 #header_logo { left:25px; transform: translateY(-50%) scale(1); }
 #header_logo a { }
 #header_logo .logo_image.pc { display:none; }
-#header_logo .logo_image.mobile { display:block; width:60px; height:20px;}
+#header_logo .logo_image.mobile { display:block; width:100%; height:20px;}
 @media screen and (max-width:750px) {
 	#header_logo { left:20px; }
   #index_header_logo .logo_image.mobile { display:block; }
